@@ -3,25 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67B236DDE1C3BADABBCB4FAD /* Pods_GPA_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F28CBEBA90B1304708BDA19 /* Pods_GPA_Calculator.framework */; };
+		992F79A421FA64AA00EB661F /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F79A321FA64A900EB661F /* GradeCell.swift */; };
+		992F79A621FA687B00EB661F /* DesignableXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F79A521FA687B00EB661F /* DesignableXView.swift */; };
 		9943CDDF1EC9FF5600449555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CDDE1EC9FF5600449555 /* AppDelegate.swift */; };
-		9943CDE11EC9FF5600449555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CDE01EC9FF5600449555 /* ViewController.swift */; };
-		9943CDE41EC9FF5600449555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9943CDE21EC9FF5600449555 /* Main.storyboard */; };
-		9943CDE61EC9FF5600449555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9943CDE51EC9FF5600449555 /* Assets.xcassets */; };
-		9943CDE91EC9FF5600449555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9943CDE71EC9FF5600449555 /* LaunchScreen.storyboard */; };
+		9943CDE11EC9FF5600449555 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CDE01EC9FF5600449555 /* MainViewController.swift */; };
+		9943CE031ECA000900449555 /* Convertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CDFF1ECA000900449555 /* Convertions.swift */; };
+		9943CE041ECA000900449555 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CE001ECA000900449555 /* GradientView.swift */; };
+		9943CE051ECA000900449555 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CE011ECA000900449555 /* Extensions.swift */; };
+		9943CE061ECA000900449555 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CE021ECA000900449555 /* Functions.swift */; };
+		9943CE0A1ECA002E00449555 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943CE091ECA002E00449555 /* Grade.swift */; };
+		9943CE0E1ECA00A300449555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9943CE0D1ECA00A300449555 /* Main.storyboard */; };
+		9943CE101ECA00AB00449555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9943CE0F1ECA00AB00449555 /* LaunchScreen.storyboard */; };
+		9943CE121ECA00E600449555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9943CE111ECA00E600449555 /* Assets.xcassets */; };
+		9974447F1ECA267A000F87DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974447E1ECA267A000F87DC /* GoogleService-Info.plist */; };
+		99E200FC1F82A20500541A40 /* Page1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E200FB1F82A20500541A40 /* Page1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002DA430E79FC9D472F1F3B9 /* Pods-GPA Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Calculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Calculator/Pods-GPA Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		5F074093A9AA3CB2780A64CD /* Pods-GPA Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Calculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Calculator/Pods-GPA Calculator.debug.xcconfig"; sourceTree = "<group>"; };
+		8F28CBEBA90B1304708BDA19 /* Pods_GPA_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPA_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9901362F1F825CFB00F6EA87 /* GPA Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GPA Calculator.entitlements"; sourceTree = "<group>"; };
+		992F79A321FA64A900EB661F /* GradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
+		992F79A521FA687B00EB661F /* DesignableXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableXView.swift; sourceTree = "<group>"; };
+		992F79A721FA765200EB661F /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F79A921FA766800EB661F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F79AB21FA766F00EB661F /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F79AD21FA766F00EB661F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F79AF21FA766F00EB661F /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9943CDDB1EC9FF5600449555 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9943CDDE1EC9FF5600449555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9943CDE01EC9FF5600449555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9943CDE31EC9FF5600449555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9943CDE51EC9FF5600449555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9943CDE81EC9FF5600449555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9943CDE01EC9FF5600449555 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9943CDEA1EC9FF5600449555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9943CDFF1ECA000900449555 /* Convertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertions.swift; sourceTree = "<group>"; };
+		9943CE001ECA000900449555 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		9943CE011ECA000900449555 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9943CE021ECA000900449555 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		9943CE091ECA002E00449555 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		9943CE0D1ECA00A300449555 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9943CE0F1ECA00AB00449555 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9943CE111ECA00E600449555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9974447E1ECA267A000F87DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99E200FB1F82A20500541A40 /* Page1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,16 +57,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B236DDE1C3BADABBCB4FAD /* Pods_GPA_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ED3CB8090108961772A8335 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				992F79AB21FA766F00EB661F /* FirebaseCore.framework */,
+				992F79AD21FA766F00EB661F /* GoogleUtilities.framework */,
+				992F79AF21FA766F00EB661F /* nanopb.framework */,
+				992F79A921FA766800EB661F /* SwiftyJSON.framework */,
+				992F79A721FA765200EB661F /* KTCenterFlowLayout.framework */,
+				8F28CBEBA90B1304708BDA19 /* Pods_GPA_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58B218F44962C4ECEF4FE5C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F074093A9AA3CB2780A64CD /* Pods-GPA Calculator.debug.xcconfig */,
+				002DA430E79FC9D472F1F3B9 /* Pods-GPA Calculator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9943CDD21EC9FF5600449555 = {
 			isa = PBXGroup;
 			children = (
 				9943CDDD1EC9FF5600449555 /* GPA Calculator */,
+				4ED3CB8090108961772A8335 /* Frameworks */,
+				58B218F44962C4ECEF4FE5C8 /* Pods */,
 				9943CDDC1EC9FF5600449555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +107,48 @@
 		9943CDDD1EC9FF5600449555 /* GPA Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				9943CDDE1EC9FF5600449555 /* AppDelegate.swift */,
-				9943CDE01EC9FF5600449555 /* ViewController.swift */,
-				9943CDE21EC9FF5600449555 /* Main.storyboard */,
-				9943CDE51EC9FF5600449555 /* Assets.xcassets */,
-				9943CDE71EC9FF5600449555 /* LaunchScreen.storyboard */,
+				9901362F1F825CFB00F6EA87 /* GPA Calculator.entitlements */,
+				9974447E1ECA267A000F87DC /* GoogleService-Info.plist */,
 				9943CDEA1EC9FF5600449555 /* Info.plist */,
+				9943CE0F1ECA00AB00449555 /* LaunchScreen.storyboard */,
+				9943CE0D1ECA00A300449555 /* Main.storyboard */,
+				9943CDDE1EC9FF5600449555 /* AppDelegate.swift */,
+				992F79A521FA687B00EB661F /* DesignableXView.swift */,
+				992F79A321FA64A900EB661F /* GradeCell.swift */,
+				9943CE111ECA00E600449555 /* Assets.xcassets */,
+				9943CE071ECA001500449555 /* Controller */,
+				9943CDF61EC9FFDE00449555 /* Helpers */,
+				9943CE081ECA002600449555 /* Model */,
 			);
 			path = "GPA Calculator";
+			sourceTree = "<group>";
+		};
+		9943CDF61EC9FFDE00449555 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9943CDFF1ECA000900449555 /* Convertions.swift */,
+				9943CE001ECA000900449555 /* GradientView.swift */,
+				9943CE011ECA000900449555 /* Extensions.swift */,
+				9943CE021ECA000900449555 /* Functions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9943CE071ECA001500449555 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9943CDE01EC9FF5600449555 /* MainViewController.swift */,
+				99E200FB1F82A20500541A40 /* Page1.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9943CE081ECA002600449555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9943CE091ECA002E00449555 /* Grade.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9943CDED1EC9FF5600449555 /* Build configuration list for PBXNativeTarget "GPA Calculator" */;
 			buildPhases = (
+				8246C487CC4923D1A1C353C6 /* [CP] Check Pods Manifest.lock */,
 				9943CDD71EC9FF5600449555 /* Sources */,
 				9943CDD81EC9FF5600449555 /* Frameworks */,
 				9943CDD91EC9FF5600449555 /* Resources */,
+				57651C32C6A541118ABAF14E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,18 +180,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Arsalan Iravani";
 				TargetAttributes = {
 					9943CDDA1EC9FF5600449555 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = G7CN72P9F4;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 9943CDD61EC9FF5600449555 /* Build configuration list for PBXProject "GPA Calculator" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -124,44 +219,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9943CDE91EC9FF5600449555 /* LaunchScreen.storyboard in Resources */,
-				9943CDE61EC9FF5600449555 /* Assets.xcassets in Resources */,
-				9943CDE41EC9FF5600449555 /* Main.storyboard in Resources */,
+				9943CE101ECA00AB00449555 /* LaunchScreen.storyboard in Resources */,
+				9974447F1ECA267A000F87DC /* GoogleService-Info.plist in Resources */,
+				9943CE121ECA00E600449555 /* Assets.xcassets in Resources */,
+				9943CE0E1ECA00A300449555 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57651C32C6A541118ABAF14E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPA Calculator/Pods-GPA Calculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KTCenterFlowLayout/KTCenterFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTCenterFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPA Calculator/Pods-GPA Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8246C487CC4923D1A1C353C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPA Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9943CDD71EC9FF5600449555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9943CDE11EC9FF5600449555 /* ViewController.swift in Sources */,
+				9943CE051ECA000900449555 /* Extensions.swift in Sources */,
+				9943CE031ECA000900449555 /* Convertions.swift in Sources */,
+				9943CDE11EC9FF5600449555 /* MainViewController.swift in Sources */,
+				9943CE0A1ECA002E00449555 /* Grade.swift in Sources */,
+				9943CE041ECA000900449555 /* GradientView.swift in Sources */,
+				992F79A621FA687B00EB661F /* DesignableXView.swift in Sources */,
+				992F79A421FA64AA00EB661F /* GradeCell.swift in Sources */,
+				99E200FC1F82A20500541A40 /* Page1.swift in Sources */,
 				9943CDDF1EC9FF5600449555 /* AppDelegate.swift in Sources */,
+				9943CE061ECA000900449555 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9943CDE21EC9FF5600449555 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9943CDE31EC9FF5600449555 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9943CDE71EC9FF5600449555 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9943CDE81EC9FF5600449555 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9943CDEB1EC9FF5600449555 /* Debug */ = {
@@ -174,15 +304,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -224,15 +362,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,27 +405,51 @@
 		};
 		9943CDEE1EC9FF5600449555 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F074093A9AA3CB2780A64CD /* Pods-GPA Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				DEVELOPMENT_TEAM = G7CN72P9F4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+				);
 				INFOPLIST_FILE = "GPA Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arsalan.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		9943CDEF1EC9FF5600449555 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 002DA430E79FC9D472F1F3B9 /* Pods-GPA Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				DEVELOPMENT_TEAM = G7CN72P9F4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+					"$(PROJECT_DIR)/GPA\\ Calculator",
+				);
 				INFOPLIST_FILE = "GPA Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arsalan.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -302,6 +472,7 @@
 				9943CDEF1EC9FF5600449555 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
