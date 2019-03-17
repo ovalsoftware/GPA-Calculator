@@ -190,7 +190,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -408,7 +408,6 @@
 			baseConfigurationReference = 5F074093A9AA3CB2780A64CD /* Pods-GPA Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				DEVELOPMENT_TEAM = G7CN72P9F4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,7 +432,6 @@
 			baseConfigurationReference = 002DA430E79FC9D472F1F3B9 /* Pods-GPA Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				DEVELOPMENT_TEAM = G7CN72P9F4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
