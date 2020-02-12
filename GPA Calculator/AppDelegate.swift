@@ -16,32 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UIApplication.shared.statusBarStyle = .lightContent
-        
-        // Initialize the Google Mobile Ads SDK.
-        // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-2093824465891343~1538635312")
-       
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc: UIViewController
-        
-        if UserDefaults.standard.value(forKey: stringKey) == nil {
-            // show onboarding screen
-            vc = storyboard.instantiateViewController(withIdentifier: "OnboardingID")
-            UserDefaults.standard.setValue("true", forKey: stringKey)
-        } else {
-            // show main screen
-            vc = storyboard.instantiateInitialViewController()!
+        GADMobileAds.sharedInstance().start { (status) in
+            print(status)
         }
-        
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
 
+        if let g = getGrades() {
+            grades = g
+        }
+        
+        print(grades)
+        
         return true
     }
     

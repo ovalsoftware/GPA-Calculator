@@ -16,3 +16,11 @@ func isValidGrade(stringToCheck : String) -> Bool {
     }
     return false
 }
+
+func saveGrades(){
+    UserDefaults.standard.set(grades, forKey: "grades")
+}
+
+func getGrades() -> Dictionary<String, Double>? {
+    return UserDefaults.standard.value(forKey: "grades") as? Dictionary<String, Double>
+}
