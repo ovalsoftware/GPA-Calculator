@@ -39,8 +39,6 @@
 	<string>GPA Calculator</string>
 	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-2093824465891343~1538635312</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbauth2</string>

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 let stringKey = "isFisrtTime"
 
@@ -17,12 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        GADMobileAds.sharedInstance().start { (status) in
-            print(status)
-        }
-        
-        FirebaseApp.configure()
 
         if let g = getGrades() {
             grades = g

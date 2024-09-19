@@ -8,19 +8,14 @@
 
 import UIKit
 import StoreKit
-import GoogleMobileAds
 import KTCenterFlowLayout
 
-class ViewController: UIViewController, GADBannerViewDelegate {
+class ViewController: UIViewController {
     
     var isLoginSuccess = false
 
     @IBOutlet weak var gpaLabel: UILabel!
     @IBOutlet weak var enterGradeLabel: UILabel!
-    
-    @IBOutlet weak var bannerView: GADBannerView!
-
-    var interstitial: GADInterstitial!
     
     @IBOutlet weak var a1: UIButton!
     @IBOutlet weak var a2: UIButton!
@@ -78,22 +73,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
         enterGradeLabel.adjustsFontSizeToFitWidth = true
 
-        // Request
-        let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
-//        request.keywords = ["Unity", "Programming", "Python", "Blender", "Chess"]
-
-        // BannerView
-        bannerView.adUnitID = "ca-app-pub-2093824465891343/3015368515"
-        bannerView.delegate = self
-        bannerView.rootViewController = self
-        bannerView.isAutoloadEnabled = true
-        bannerView.layer.cornerRadius = 8
-        
-        // Popup
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2093824465891343/9404067875")
-        interstitial.load(request)
-
         showGrades()
     }
 
@@ -139,17 +118,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
         if numberOfTaps == 15 {
             SKStoreReviewController.requestReview()
-        }
-
-        if numberOfTaps % 8 == 0 {
-            if interstitial.isReady {
-                interstitial.present(fromRootViewController: self)
-            }
-
-            DispatchQueue.global(qos: .userInitiated).async {
-                self.interstitial = GADInterstitial(adUnitID: "ca-app-pub-2093824465891343/9404067875")
-                self.interstitial.load(GADRequest())
-            }
         }
 
         if !creditSelected {
