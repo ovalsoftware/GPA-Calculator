@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="24A335" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CourseItem" representedClassName="CourseItem" syncable="YES" codeGenerationType="class">
+        <attribute name="credits" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="grade" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="toTerm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TermItem" inverseName="courses" inverseEntity="TermItem"/>
+    </entity>
+    <entity name="TermItem" representedClassName="TermItem" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseItem" inverseName="toTerm" inverseEntity="CourseItem"/>
+    </entity>
+</model>
