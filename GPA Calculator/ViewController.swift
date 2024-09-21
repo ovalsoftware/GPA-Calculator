@@ -258,12 +258,12 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func settingPressed() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingsID") as! SettingsViewController
-        UserDefaults.standard.setValue("true", forKey: stringKey)
-
-        present(vc, animated: true)
-    }
+//    @IBAction func settingPressed() {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingsID") as! SettingsViewController
+//        UserDefaults.standard.setValue("true", forKey: stringKey)
+//
+//        present(vc, animated: true)
+//    }
     
     
 }

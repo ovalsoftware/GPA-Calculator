@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFc-Xj-4UU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xZq-zZ-3tO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="31" y="17"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="3gr-yn-cGv">
             <objects>
                 <viewController storyboardIdentifier="SettingsID" id="KXo-Gq-w6u" customClass="SettingsViewController" customModule="GPA_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -280,6 +280,7 @@
                         <viewLayoutGuide key="safeArea" id="AGa-Y5-v6l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="JjX-bq-zTP"/>
                     <connections>
                         <outlet property="ATextField" destination="kJb-g1-Fvz" id="Cpe-eo-U2z"/>
                         <outlet property="AminusTextField" destination="ZhJ-2C-LDV" id="TUe-7q-oS4"/>
@@ -296,9 +297,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZG-rC-Fgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.79999999999995" y="16.641679160419791"/>
+            <point key="canvasLocation" x="-799" y="685"/>
         </scene>
-        <!--View Controller-->
+        <!--Quick Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Main" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="GPA_Calculator" sceneMemberID="viewController">
@@ -532,14 +533,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-We-UXN">
-                                <rect key="frame" x="16" y="35" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8-settings"/>
-                                <connections>
-                                    <action selector="settingPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mQ-Cp-WiO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nht-Vb-yoP"/>
                         <color key="backgroundColor" red="0.85751110409999998" green="0.50204622350000006" blue="0.0062455516789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -569,6 +562,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quick Calculator" image="number" catalog="system" id="gKw-8T-fEE"/>
                     <navigationItem key="navigationItem" id="bxy-Yc-glp"/>
                     <connections>
                         <outlet property="a1" destination="QNn-DW-Yr8" id="2mM-sq-rUx"/>
@@ -592,7 +586,25 @@
             </objects>
             <point key="canvasLocation" x="-815.20000000000005" y="16.641679160419791"/>
         </scene>
-        <!--CalculatorVC-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="fPV-i2-Swy">
+            <objects>
+                <tabBarController id="xZq-zZ-3tO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2bi-Qj-bJo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tFc-Xj-4UU" kind="relationship" relationship="viewControllers" id="A4E-Q8-A0g"/>
+                        <segue destination="KXo-Gq-w6u" kind="relationship" relationship="viewControllers" id="8Q3-Kx-XxG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hed-IZ-7uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2016" y="-418"/>
+        </scene>
+        <!--GPA-->
         <scene sceneID="iYT-kP-PHX">
             <objects>
                 <viewController id="tFc-Xj-4UU" customClass="GPACalculatorVC" customModule="GPA_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -600,44 +612,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gct-1f-b6Z">
-                                <rect key="frame" x="0.0" y="200" width="393" height="618"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gct-1f-b6Z">
+                                <rect key="frame" x="0.0" y="227" width="393" height="542"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-jt-Vkc">
-                                <rect key="frame" x="0.0" y="105" width="393" height="94"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-jt-Vkc">
+                                <rect key="frame" x="20" y="117.33333333333331" width="353" height="94"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-ZQ-dH3">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="94"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xi-VL-lYF">
+                                                <rect key="frame" x="8" y="8" width="150.66666666666666" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="M1m-Vj-2HV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-qE-FUn">
+                                                <rect key="frame" x="8" y="33.000000000000014" width="150.66666666666666" height="46"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Qnv-qE-FUn" firstAttribute="leading" secondItem="6R6-ZQ-dH3" secondAttribute="leading" constant="8" id="3Ly-xd-K9o"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qnv-qE-FUn" secondAttribute="bottom" constant="15" id="KVe-0O-Ue9"/>
+                                            <constraint firstItem="2Xi-VL-lYF" firstAttribute="leading" secondItem="6R6-ZQ-dH3" secondAttribute="leading" constant="8" id="cun-BG-SEf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qnv-qE-FUn" secondAttribute="trailing" constant="8" id="n4n-YQ-p8B"/>
+                                            <constraint firstItem="Qnv-qE-FUn" firstAttribute="top" secondItem="2Xi-VL-lYF" secondAttribute="bottom" constant="-14.999999999999986" id="nqf-kj-Vuw"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Xi-VL-lYF" secondAttribute="trailing" constant="8" id="uHw-qD-v8n"/>
+                                            <constraint firstItem="2Xi-VL-lYF" firstAttribute="top" secondItem="6R6-ZQ-dH3" secondAttribute="top" constant="8" id="xUX-SM-ks5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMt-I1-Dtp">
+                                        <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="94"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-4o-ckQ">
+                                                <rect key="frame" x="8" y="33.000000000000014" width="150.33333333333334" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-LC-F5O">
+                                                <rect key="frame" x="8" y="8" width="150.33333333333334" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="GGb-qf-xbU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="NVm-4o-ckQ" firstAttribute="top" secondItem="G1Q-LC-F5O" secondAttribute="bottom" constant="-17.999999999999986" id="5b1-3K-cKT"/>
+                                            <constraint firstAttribute="trailing" secondItem="G1Q-LC-F5O" secondAttribute="trailing" constant="8" id="5xX-TF-MsK"/>
+                                            <constraint firstAttribute="bottom" secondItem="NVm-4o-ckQ" secondAttribute="bottom" constant="8" id="haI-6X-25p"/>
+                                            <constraint firstItem="G1Q-LC-F5O" firstAttribute="top" secondItem="rMt-I1-Dtp" secondAttribute="top" constant="8" id="jXy-hK-buG"/>
+                                            <constraint firstItem="NVm-4o-ckQ" firstAttribute="leading" secondItem="rMt-I1-Dtp" secondAttribute="leading" constant="8" id="npy-K4-Hpq"/>
+                                            <constraint firstItem="G1Q-LC-F5O" firstAttribute="leading" secondItem="rMt-I1-Dtp" secondAttribute="leading" constant="8" id="oXX-G0-iDe"/>
+                                            <constraint firstAttribute="trailing" secondItem="NVm-4o-ckQ" secondAttribute="trailing" constant="8" id="xWv-tC-kSe"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="daD-hD-dow"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-T9-K2e">
-                                <rect key="frame" x="107" y="63" width="179" height="34"/>
+                                <rect key="frame" x="107" y="63" width="179" height="34.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="Kgy-IQ-754"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Term" imagePadding="8">
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Select a Term" imagePadding="8">
                                     <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dne-aO-rEf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PYU-T9-K2e" firstAttribute="top" secondItem="Dne-aO-rEf" secondAttribute="top" constant="4" id="4xc-Pa-3g3"/>
-                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="leading" secondItem="Dne-aO-rEf" secondAttribute="leading" id="9Xh-fh-i2H"/>
-                            <constraint firstItem="gct-1f-b6Z" firstAttribute="top" secondItem="ThY-jt-Vkc" secondAttribute="bottom" constant="1" id="EAR-HQ-sg1"/>
-                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="trailing" secondItem="Dne-aO-rEf" secondAttribute="trailing" id="Pms-ho-VIV"/>
+                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="leading" secondItem="Dne-aO-rEf" secondAttribute="leading" constant="20" id="9Xh-fh-i2H"/>
+                            <constraint firstItem="gct-1f-b6Z" firstAttribute="top" secondItem="ThY-jt-Vkc" secondAttribute="bottom" constant="15.666666666666686" id="EAR-HQ-sg1"/>
+                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="trailing" secondItem="Dne-aO-rEf" secondAttribute="trailing" constant="-20" id="Pms-ho-VIV"/>
                             <constraint firstItem="gct-1f-b6Z" firstAttribute="leading" secondItem="Dne-aO-rEf" secondAttribute="leading" id="Q2d-TQ-8r3"/>
                             <constraint firstItem="gct-1f-b6Z" firstAttribute="bottom" secondItem="Dne-aO-rEf" secondAttribute="bottom" id="QCe-ef-s7r"/>
                             <constraint firstItem="PYU-T9-K2e" firstAttribute="centerX" secondItem="ufa-OY-6qj" secondAttribute="centerX" id="Ro1-C5-7zE"/>
                             <constraint firstItem="gct-1f-b6Z" firstAttribute="trailing" secondItem="Dne-aO-rEf" secondAttribute="trailing" id="Va7-RK-yO5"/>
-                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="top" secondItem="PYU-T9-K2e" secondAttribute="bottom" constant="8" id="X1k-LU-nOT"/>
+                            <constraint firstItem="ThY-jt-Vkc" firstAttribute="top" secondItem="PYU-T9-K2e" secondAttribute="bottom" constant="20" id="X1k-LU-nOT"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="GPA" image="book.pages" catalog="system" id="MeN-F1-9M0"/>
                     <connections>
+                        <outlet property="overallGPALabel" destination="NVm-4o-ckQ" id="IAO-zI-uQt"/>
                         <outlet property="tableview" destination="gct-1f-b6Z" id="dOP-R2-5d4"/>
                         <outlet property="termButton" destination="PYU-T9-K2e" id="nJT-3W-Psk"/>
+                        <outlet property="termGPALabel" destination="Qnv-qE-FUn" id="5fN-MG-OUd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6s-mG-X4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -646,14 +733,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.pages" catalog="system" width="107" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="finger" width="48" height="48"/>
-        <image name="icons8-settings" width="75" height="75"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="number" catalog="system" width="128" height="123"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

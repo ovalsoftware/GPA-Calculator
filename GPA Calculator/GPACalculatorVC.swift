@@ -21,6 +21,9 @@ class GPACalculatorVC: UIViewController {
     var courses: [CourseItem] = []
     var selectedTerm: TermItem?
     
+    @IBOutlet weak var termGPALabel: UILabel!
+    @IBOutlet weak var overallGPALabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +34,7 @@ class GPACalculatorVC: UIViewController {
         tableview.register(UINib(nibName: ContentCell.identifier, bundle: nil), forCellReuseIdentifier: ContentCell.identifier)
         tableview.register(UINib(nibName: FooterCell.identifier, bundle: nil), forCellReuseIdentifier: FooterCell.identifier)
         tableview.allowsSelection = false
+        tableview.contentInset = UIEdgeInsets(top: -30, left: 0, bottom: 0, right: 0)
         
         configTerm()
         if let t = terms.first{
@@ -38,13 +42,22 @@ class GPACalculatorVC: UIViewController {
             self.selectedTerm = t
             self.updateCourses()
         }
+        updateGPA()
     }
+    
+    //MARK: - Term
     
     func addTerm(title: String){
         let term = TermItem(context: PersistenceController.shared.container.viewContext)
         term.title = title
         PersistenceController.shared.saveContext()
+        print("count: ", terms.count)
         configTerm()
+        if let t = terms.first{
+            self.termButton.setTitle(t.title ?? "-", for: .normal)
+            self.selectedTerm = t
+            self.updateCourses()
+        }
     }
     
     func fetchTerms() {
@@ -84,6 +97,7 @@ class GPACalculatorVC: UIViewController {
         
     }
     
+    
     func showAlertWithTextField() {
         let alertController = UIAlertController(title: "Enter Term Name", message: nil, preferredStyle: .alert)
          
@@ -115,7 +129,10 @@ class GPACalculatorVC: UIViewController {
         self.termButton.setTitle(term.title ?? "-", for: .normal)
         self.selectedTerm = term
         self.updateCourses()
+        self.updateGPA()
     }
+    
+    //MARK: - Course
     
     func updateCourses(){
         guard let term = self.selectedTerm else {return}
@@ -145,20 +162,79 @@ class GPACalculatorVC: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     func addCourse(title: String, credits: Int){
         guard let term = selectedTerm else {return}
+        guard title.isEmpty == false else {return}
+        guard credits != 0 else {return}
         let course = CourseItem(context: PersistenceController.shared.container.viewContext)
         course.credits = Int16(credits)
         course.title = title
         term.addToCourses(course)
         PersistenceController.shared.saveContext()
         updateCourses()
+        updateGPA()
     }
     
     func saveGrade(course: CourseItem, grade: String){
         course.grade = grade
         PersistenceController.shared.saveContext()
         tableview.reloadData()
+        updateGPA()
+    }
+    
+    
+    //MARK: - GPA
+
+    func updateGPA(){
+        let termGPA = getTermGPA()
+        let termGPAVal = String(format: "%.2f", termGPA)
+        termGPALabel.text = "\(termGPAVal)"
+        let gpa = getOverallGPA()
+        let overallGPAVal = String(format: "%.2f", gpa)
+        overallGPALabel.text = "\(overallGPAVal)"
+    }
+    
+    private func getTermGPA() -> Double {
+        var point = 0.0
+        var sumOfCretids = 0.0
+        guard let term = selectedTerm else {return 0.0}
+        for course in term.courses?.allObjects as [CourseItem] {
+            var gradePoints: Double = 0.0
+            if let grade = course.grade {
+                gradePoints = grades[grade] ?? 0.0
+            }
+            point += Double(course.credits) * Double(gradePoints)
+            sumOfCretids += Double(course.credits)
+        }
+        
+        if !(point / sumOfCretids).isNaN {
+            return point / sumOfCretids
+        }
+        
+        return 0.0
+    }
+    
+    private func getOverallGPA() -> Double {
+        var point = 0.0
+        var sumOfCretids = 0.0
+        
+        for term in terms {
+            for course in term.courses?.allObjects as [CourseItem] {
+                var gradePoints: Double = 0.0
+                if let grade = course.grade {
+                    gradePoints = grades[grade] ?? 0.0
+                }
+                point += Double(course.credits) * Double(gradePoints)
+                sumOfCretids += Double(course.credits)
+            }
+        }
+        
+        if !(point / sumOfCretids).isNaN {
+            return point / sumOfCretids
+        }
+        
+        return 0.0
     }
 }
 
@@ -166,6 +242,7 @@ extension GPACalculatorVC: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courses.count + 2
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
              let cell = tableView.dequeueReusableCell(withIdentifier: HeaderCell.identifier, for: indexPath) as! HeaderCell
@@ -190,9 +267,11 @@ extension GPACalculatorVC: UITableViewDataSource, UITableViewDelegate{
                  }
                  return action
              }
+             
              let emptyItem = UIAction(title: "-") { (action) in
                  self.saveGrade(course: course, grade: "-")
              }
+             
              menuItems.append(emptyItem)
              let menu = UIMenu(options: .displayInline, children: menuItems)
              cell.gradeBtn.menu = menu
@@ -201,4 +280,17 @@ extension GPACalculatorVC: UITableViewDataSource, UITableViewDelegate{
              return cell
          }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let courses = selectedTerm?.courses?.allObjects as [CourseItem]
+            let course = courses[indexPath.row - 1]
+            PersistenceController.shared.container.viewContext.delete(course)
+            PersistenceController.shared.saveContext()
+            if let term = selectedTerm {
+                termDidChange(term: term)
+            }
+        }
+    }
+
 }
