@@ -57,6 +57,7 @@ class GPACalculatorVC: UIViewController {
             self.termButton.setTitle(t.title ?? "-", for: .normal)
             self.selectedTerm = t
             self.updateCourses()
+            self.updateGPA()
         }
     }
     
@@ -85,10 +86,27 @@ class GPACalculatorVC: UIViewController {
             }
             return action
         }
+        
+        let manageTermsBtn = UIAction(title: "Manage Terms", image: UIImage(systemName: "list.bullet.rectangle.portrait")) { (action) in
+            let termsManagerVC = TermManagerVC()
+            termsManagerVC.modalPresentationStyle = .pageSheet
+            termsManagerVC.termsSheetDismiss = {
+                self.configTerm()
+                if let t = self.terms.first{
+                    self.termButton.setTitle(t.title ?? "-", for: .normal)
+                    self.selectedTerm = t
+                    self.updateCourses()
+                    self.updateGPA()
+                }
+            }
+            self.present(termsManagerVC, animated: true)
+        }
+        
         let addTermBtn = UIAction(title: "Add Term", image: UIImage(systemName: "plus")) { (action) in
             self.showAlertWithTextField()
         }
         
+        menuItems.append(manageTermsBtn)
         menuItems.append(addTermBtn)
         
         let menu = UIMenu(options: .displayInline, children: menuItems)

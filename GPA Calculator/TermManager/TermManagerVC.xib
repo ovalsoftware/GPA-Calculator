@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermManagerVC" customModule="GPA_Calculator" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="2qd-4v-s6N" id="YjB-zA-p0K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-4v-s6N">
+                    <rect key="frame" x="0.0" y="133" width="393" height="685"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHb-wR-214">
+                    <rect key="frame" x="30" y="87" width="333" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2qd-4v-s6N" secondAttribute="trailing" id="A7h-Tk-d4l"/>
+                <constraint firstItem="2qd-4v-s6N" firstAttribute="top" secondItem="vHb-wR-214" secondAttribute="bottom" constant="16" id="OWH-mH-iEH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vHb-wR-214" secondAttribute="trailing" constant="30" id="Wx6-jd-kdg"/>
+                <constraint firstItem="2qd-4v-s6N" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="XOe-yH-ogX"/>
+                <constraint firstItem="vHb-wR-214" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bDq-M4-eQW"/>
+                <constraint firstItem="2qd-4v-s6N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fOi-zX-SuH"/>
+                <constraint firstItem="vHb-wR-214" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="gMr-uR-dtB"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
