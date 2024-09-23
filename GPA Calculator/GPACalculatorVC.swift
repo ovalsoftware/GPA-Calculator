@@ -22,7 +22,9 @@ class GPACalculatorVC: UIViewController {
     var selectedTerm: TermItem?
     
     @IBOutlet weak var termGPALabel: UILabel!
+    @IBOutlet weak var termCreditsLabel: UILabel!
     @IBOutlet weak var overallGPALabel: UILabel!
+    @IBOutlet weak var overallCreditsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -226,10 +228,10 @@ class GPACalculatorVC: UIViewController {
             sumOfCretids += Double(course.credits)
         }
         
+        self.termCreditsLabel.text = "\(Int(sumOfCretids)) Credits"
         if !(point / sumOfCretids).isNaN {
             return point / sumOfCretids
         }
-        
         return 0.0
     }
     
@@ -248,10 +250,11 @@ class GPACalculatorVC: UIViewController {
             }
         }
         
+        self.overallCreditsLabel.text = "\(Int(sumOfCretids)) Credits"
         if !(point / sumOfCretids).isNaN {
             return point / sumOfCretids
         }
-        
+
         return 0.0
     }
 }
