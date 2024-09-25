@@ -45,6 +45,14 @@ class GPACalculatorVC: UIViewController {
             self.updateCourses()
         }
         updateGPA()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if terms.count == 0{
+            showFirstTermAlert()
+        }
     }
     
     //MARK: - Term
@@ -128,6 +136,40 @@ class GPACalculatorVC: UIViewController {
          let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
          alertController.addAction(cancelAction)
          
+         let submitAction = UIAlertAction(title: "Submit", style: .default) { [weak self] _ in
+             if let textField = alertController.textFields?.first, let userInput = textField.text {
+                 self?.addTerm(title: userInput)
+             }
+         }
+         alertController.addAction(submitAction)
+         
+         self.present(alertController, animated: true, completion: nil)
+     }
+    
+    func getTermString() ->String{
+        let date = Date()
+        let calendar = Calendar.current
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        let season = month<=6 ? "Spring" : "Autumn"
+        let result = season + " " + String(year)
+        return result
+    }
+    
+    func showFirstTermAlert() {
+        print("first term alert")
+        let alertController = UIAlertController(title: "Enter Term Name", message: nil, preferredStyle: .alert)
+         
+         alertController.addTextField { textField in
+             textField.placeholder = "Term Name"
+         }
+         let termString = getTermString()
+        let currentTerm = UIAlertAction(title: termString, style: .default){[weak self] _ in
+            self?.addTerm(title: termString)
+            
+        }
+        alertController.addAction(currentTerm)
+        
          let submitAction = UIAlertAction(title: "Submit", style: .default) { [weak self] _ in
              if let textField = alertController.textFields?.first, let userInput = textField.text {
                  self?.addTerm(title: userInput)

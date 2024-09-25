@@ -19,6 +19,8 @@
 		867D44052C9C93B300A7C664 /* FooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867D44032C9C93B300A7C664 /* FooterCell.xib */; };
 		867D44082C9C994300A7C664 /* GPACalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 867D44062C9C994300A7C664 /* GPACalculator.xcdatamodeld */; };
 		867D440A2C9C9A4F00A7C664 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D44092C9C9A4F00A7C664 /* PersistenceController.swift */; };
+		867E7E9A2CA4130F00145F99 /* TermManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867E7E992CA4130F00145F99 /* TermManagerCell.xib */; };
+		867E7E9B2CA4130F00145F99 /* TermManagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867E7E982CA4130F00145F99 /* TermManagerCell.swift */; };
 		86B120BB2CA02169000CB4AB /* TermManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B120BA2CA02168000CB4AB /* TermManagerVC.xib */; };
 		86B120BC2CA02169000CB4AB /* TermManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B120B92CA02168000CB4AB /* TermManagerVC.swift */; };
 		86B120C42CA025A4000CB4AB /* TermManagerContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B120C32CA025A4000CB4AB /* TermManagerContentCell.xib */; };
@@ -51,6 +53,8 @@
 		867D44032C9C93B300A7C664 /* FooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCell.xib; sourceTree = "<group>"; };
 		867D44072C9C994300A7C664 /* GPACalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPACalculator.xcdatamodel; sourceTree = "<group>"; };
 		867D44092C9C9A4F00A7C664 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		867E7E982CA4130F00145F99 /* TermManagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermManagerCell.swift; sourceTree = "<group>"; };
+		867E7E992CA4130F00145F99 /* TermManagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermManagerCell.xib; sourceTree = "<group>"; };
 		86B120B92CA02168000CB4AB /* TermManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermManagerVC.swift; sourceTree = "<group>"; };
 		86B120BA2CA02168000CB4AB /* TermManagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermManagerVC.xib; sourceTree = "<group>"; };
 		86B120C22CA025A4000CB4AB /* TermManagerContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermManagerContentCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		86B120BD2CA0238F000CB4AB /* TermManager */ = {
 			isa = PBXGroup;
 			children = (
+				867E7E982CA4130F00145F99 /* TermManagerCell.swift */,
+				867E7E992CA4130F00145F99 /* TermManagerCell.xib */,
 				86B120B92CA02168000CB4AB /* TermManagerVC.swift */,
 				86B120BA2CA02168000CB4AB /* TermManagerVC.xib */,
 				86B120C22CA025A4000CB4AB /* TermManagerContentCell.swift */,
@@ -272,6 +278,7 @@
 				867D44052C9C93B300A7C664 /* FooterCell.xib in Resources */,
 				86B120C82CA025B4000CB4AB /* TermManagerFooterCell.xib in Resources */,
 				9943CE101ECA00AB00449555 /* LaunchScreen.storyboard in Resources */,
+				867E7E9A2CA4130F00145F99 /* TermManagerCell.xib in Resources */,
 				9943CE121ECA00E600449555 /* Assets.xcassets in Resources */,
 				9943CE0E1ECA00A300449555 /* Main.storyboard in Resources */,
 			);
@@ -338,6 +345,7 @@
 				992F79A421FA64AA00EB661F /* GradeCell.swift in Sources */,
 				5C50EFD223C5F01600FC686C /* SettingsViewController.swift in Sources */,
 				9943CDDF1EC9FF5600449555 /* AppDelegate.swift in Sources */,
+				867E7E9B2CA4130F00145F99 /* TermManagerCell.swift in Sources */,
 				86B120C92CA025B4000CB4AB /* TermManagerFooterCell.swift in Sources */,
 				9943CE061ECA000900449555 /* Functions.swift in Sources */,
 			);

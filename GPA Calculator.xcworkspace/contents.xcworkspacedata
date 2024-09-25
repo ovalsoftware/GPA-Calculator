@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TermManagerCell.swift">
-   </FileRef>
-   <FileRef
-      location = "group:TermManagerCell.xib">
-   </FileRef>
-   <FileRef
       location = "group:GPA Calculator.xcodeproj">
    </FileRef>
    <FileRef
